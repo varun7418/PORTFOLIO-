@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, ChevronDown, Brain, Database, BarChart3, Code2, Cpu } from 'lucide-react';
+import { Mail, ChevronDown, Brain, Database, BarChart3, Code2 } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { personalInfo } from '../../data/portfolioData';
 
@@ -44,7 +44,7 @@ function NeuralNetSVG() {
   const xs = [40, 120, 200, 280, 360];
   const color = 'rgba(124,58,237,0.35)';
   const nodeColor = 'rgba(124,58,237,0.5)';
-  const lines: JSX.Element[] = [];
+  const lines: React.ReactElement[] = [];
 
   layers.forEach((layer, li) => {
     if (li < layers.length - 1) {

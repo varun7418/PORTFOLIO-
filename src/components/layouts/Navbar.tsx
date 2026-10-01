@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Code2 } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa';
 import { navLinks, personalInfo } from '../../data/portfolioData';
 
 export default function Navbar() {
@@ -75,11 +74,11 @@ export default function Navbar() {
                 key={link.href}
                 onClick={() => scrollTo(link.href)}
                 style={{
-                  background: 'none', border: 'none', cursor: 'pointer',
+                  background: activeSection === link.href.slice(1) ? 'rgba(124, 58, 237, 0.08)' : 'none',
+                  border: 'none', cursor: 'pointer',
                   padding: '0.4rem 0.75rem', borderRadius: '6px',
                   fontSize: '0.82rem', fontWeight: 500, transition: 'all 0.2s',
                   color: activeSection === link.href.slice(1) ? '#7C3AED' : '#94A3B8',
-                  background: activeSection === link.href.slice(1) ? 'rgba(124, 58, 237, 0.08)' : 'transparent',
                 }}
               >
                 {link.label}

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Users, BookOpen, Zap } from 'lucide-react';
@@ -9,7 +10,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
-const typeIcons: Record<string, JSX.Element> = {
+const typeIcons: Record<string, React.ReactElement> = {
   Leadership: <Users size={18} />,
   Workshop: <BookOpen size={18} />,
   Hackathon: <Zap size={18} />,
